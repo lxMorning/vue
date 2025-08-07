@@ -1,0 +1,294 @@
+.van-tabbar-item__text{
+   font-size: 14px;
+}
+/*申购*/
+.listed-box{
+   background-color: #fff;
+   padding-top: 10px;
+   .listed-list-first{
+      font-size: 15px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #656567;
+   }
+   .listed-name{
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 4px;
+   }
+   .listed-price{
+      font-weight: bold;
+      font-size: 16px;
+   }
+}
+.listed-van-list{
+   overflow: auto;
+   height: calc(100vh - 180px);
+}
+.addStock-van-list{
+   overflow: auto;
+   height: calc(72vh - 4px);
+   //border: solid 1px red;
+}
+.user-van-list{
+   overflow: auto;
+   height: calc(100vh - 220px);
+   //border:solid 1px red;
+}
+.user-listed-box{
+   padding-bottom: 20px;
+}
+.btn-addMarket{
+   margin-top: 20px;
+}
+.listed-ul{
+   //height: calc(100vh - 190px);
+   //overflow: auto;
+   .listed-list{
+      border-bottom: solid 1px #d5d2d5;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      &:last-child{
+         border-bottom: 0;
+      }
+   }
+}
+.tab3-purchase-box{
+   height: calc(100vh - 96px);
+   overflow: auto;
+   .new-van-list{
+      height: 100%;
+      overflow: auto;
+   }
+}
+.purchase-box{
+   background-color: #fff;
+   margin-bottom: 4px;
+   .purchase-time{
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 4px;
+   }
+
+}
+.trade-box{
+   li{
+      background-color: #fff;
+      margin-top: 10px;
+   }
+}
+.purchase-title{
+   padding: 10px 16px;
+   border-bottom: solid 1px #d5d2d5;
+   align-items: center;
+}
+.purchase-name{
+   font-weight: bold;
+   font-size: 16px;
+   margin-right: 4px;
+}
+.purchase-content{
+   padding: 10px 16px;
+   display: flex;
+}
+.purchase-tab-content{
+   .van-col{
+      > div{
+         padding: 2px;
+         font-size: 14px;
+      }
+   }
+}
+
+.btn-market {
+   text-align: right;
+   .van-button{
+      padding: 6px 15px;
+      //display: inline-block;
+   }
+}
+.addStock-title{
+   margin: 4px auto;
+   font-size: 12px;
+}
+.addStock-history{
+   margin: 6px 0 12px;
+   display: flex;
+   overflow: hidden;
+   flex-wrap: nowrap;
+   height: 24px;
+    .bg-span{
+      margin-right: 8px;
+      padding: 2px 8px;
+      min-width: 40px;
+      text-align: center;
+      &:last-of-type{
+         margin-right: 0;
+      }
+   }
+}
+/*tabbar  */
+.barR-icon{
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   //background-color: #8ba6e6;
+   .iconfont{
+      color: #3365e3;
+      font-size: 22px;
+   }
+}
+.bgBlock-lightBlue{
+   background-color: #ebf1ff;
+   margin-top: 10px;
+   padding: 10px;
+}
+.vanCell-padding0{
+   border-top: 0;
+   .van-cell{
+      padding: 10px 0;
+      &::after{
+         left: 0;
+      }
+   }
+}
+
+
+/*我的设置*/
+.mySet-contain{
+   .vanCell-padding0{
+      margin-top: 20px;
+   }
+   .van-hairline--top-bottom::after,
+   .van-hairline-unset--top-bottom::after {
+      border-width: 0 0;
+      border-bottom-width: 1px;
+   }
+   .van-cell{
+      &:first-child{
+         border-top: 0;
+      }
+   }
+   .van-cell__value,
+   .van-cell__right-icon{
+      color: #3365e3;
+   }
+}
+
+/*綁定銀行卡*/
+.bind-box{
+   .van-cell{
+      margin-bottom: 10px;
+   }
+}
+
+/*绑定*/
+.pass-box{
+   text-align: center;
+   padding-top: 20px;
+   .text-note{
+      margin: 4px 0 30px;
+   }
+}
+
+.news-title{
+   margin-bottom: 10px;
+   padding-bottom: 10px;
+}
+
+.trade-main {
+   height: calc(100vh - 139px);
+   margin-top: -10px;
+   overflow: auto;
+   width: 100%;
+   background-color: #fff;
+}
+
+/*交易*/
+.trade-bg-stateUl {
+   //background-color: #8ba6e6;
+   //color: #3365e3;
+   margin-top: 4px;
+   height: 50px;
+   line-height: 40px;
+   border-top-left-radius: 8px !important;
+   border-top-right-radius: 8px !important;
+   display: block !important;
+}
+
+.trade-stateUl {
+   border-top-left-radius: 8px;
+   border-top-right-radius: 8px;
+   padding: 10px;
+   border-bottom: solid 1px #d5d2d5;
+   font-size: 14px;
+   .trade-first {
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      + div {
+         height: 21.6px;
+         line-height: 21.6px;
+         display: flex;
+         align-items: center;
+      }
+      .ellipsis{
+         display: inline-block;
+         max-width: 60px;
+      }
+   }
+   .bgRed,
+   .bgYellow,
+   .bgTheme
+   {
+      padding: 2px 3px;
+      font-size: 12px;
+   }
+}
+.chart-box {
+   height: 600px;
+   width: 100%;
+   //padding: 2%;
+   canvas{
+      //height: 100% !important;
+      //width: 100% !important;
+   }
+}
+
+/*交易*/
+.trade-van-list{
+   overflow: auto;
+   height: calc(100vh - 144px);
+}
+.trade-new-van-list{
+   overflow: auto;
+   height: calc(100vh - 114px);
+}
+.van-icon-underway-o{
+   font-size: 12px;
+   margin-right: 2px;
+}
+
+.transaction-list{
+   margin-top: 16px !important;
+   box-shadow: 1px 1px 8px #ebeffe;
+   border-radius: 6px;
+   font-size: 14px;
+   .transaction-title{
+      align-items: center;
+      padding: 10px;
+      background-color: #f1f3ff;
+      color: #333;
+   }
+   .transaction-time{
+      padding: 10px;
+   }
+   .record-type{
+      min-width: 40px;
+      text-align: center;
+   }
+}
+.article{
+   text-indent: 24px;
+   padding-bottom: 8px;
+}

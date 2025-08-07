@@ -1,0 +1,121 @@
+$themeColor: #3365e3;
+$bgLightBlue: #8ba6e6;
+$blueLight: #cbdaff;
+
+$bgGray:#f6f5f8;
+$borderGray:#d5d2d5;
+//$colorGray:#cdcbce;
+$colorGray:gray;
+
+$colorRed:#ef5963;
+$colorPink:#ffe0db;
+$colorGreen:#30a375;
+$colorYellow:#fe9c02;
+
+
+@mixin fontColor($color) {
+  color: $color;
+}
+@mixin bg-span() {
+   font-size: 12px;
+   padding: 2px 3px;
+   border-radius: 3px;
+   display: inline-block;
+   width: auto;
+}
+
+.bg-span {
+   @include bg-span();
+}
+
+
+#app{
+   .color-theme {
+      @include fontColor($themeColor);
+   }
+   .color-blueLight {
+      @include fontColor($bgLightBlue);
+   }
+   .color-gray {
+      @include fontColor($colorGray);
+   }
+   .color-white {
+      @include fontColor(#fff);
+   }
+   .color-green{
+      @include fontColor($colorGreen);
+   }
+   .color-red{
+      @include fontColor($colorRed);
+   }
+   .color-pink{
+      @include fontColor($colorPink);
+   }
+   .color-yellow{
+      @include fontColor($colorYellow);
+   }
+
+   .bg-gray{
+      background-color: $bgGray;
+   }
+   .bg-green{
+      background-color: $colorGreen;
+      @include bg-span();
+   }
+   .bg-greenLight{
+      background-color: #dbffe4;
+      color: #70a882;
+      @include bg-span();
+   }
+   .bgTheme{
+      background-color: #3365e3;
+      color: #fff;
+   }
+   .bg-yellow{
+      background-color: #ffe6c7;
+      color: #ff9442;
+      @include bg-span();
+   }
+   .bgYellow{
+      background-color: #ff9d00;
+      color: #fff;
+      @include bg-span();
+   }
+   .bg-blueLight2{
+      background-color: #cbdafe;
+      color: #3365e3;
+      @include bg-span();
+   }
+   .bg-blueLight{
+      background-color: #cbdafe;
+      color: #3365e3;
+   }
+
+   .bg-theme{
+      background-color: #cbdafe; /* #ebeffe */
+      color: #3365e3;
+      @include bg-span();
+
+   }
+   .bg-red{
+      background-color: $colorRed;
+      @include bg-span();
+   }
+   .bg-green{
+      background-color: $colorGreen;
+      @include bg-span();
+   }
+   .bgRed{
+      background-color: $colorRed;
+      color: #fff;
+   }
+   .bgGreen{
+      background-color: $colorGreen;
+      color: #fff;
+   }
+   .bg-pink{
+      background-color: $colorPink;
+      color: $colorRed;
+      @include bg-span();
+   }
+}
