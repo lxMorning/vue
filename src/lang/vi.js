@@ -269,13 +269,13 @@ export default {
     "text13": "Xác nhận"
   },
   "my_exchange": {
-    "text1": "Số tiền chuyển đổi：",
+    "text1": "SSố dư khả dụng :",
     "text2": "Số tiền chuyển đổi：",
     "text3": "Chuyển đổi USD",
     "text4": "Chuyển đổi VND",
-    "text5": "Số tiền rút",
-    "text6": "Mật khẩu quỹ",
-    "text7": "Gửi\n                hoàn thành"
+    "text5": "Số tiền chuyển đổi",
+    "text6": "Mật khẩu giao dịch",
+    "text7": "Gửi yêu cầu "
   },
   "my_password": {
     "text1": "Mật khẩu hiện tại",

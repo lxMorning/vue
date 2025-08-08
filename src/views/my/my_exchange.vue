@@ -1,36 +1,37 @@
 <template>
     <div>
-        <navBar navTitle="Chuyển đổi" />
+        <navBar navTitle="Chuyển đổi tiền tệ" />
         <div class="bgBlock-lightBlue" v-show="activeType==1">{{ $t('my_exchange.text1') }}<span class="color-theme">{{
-                widthdrawObj.total_money }}</span></div>
+                 formatCurrency(widthdrawObj.total_money) }}</span></div>
         <div class="bgBlock-lightBlue" v-show="activeType == 2">{{ $t('my_exchange.text1') }}<span class="color-theme">{{
-                widthdrawObj.usd_money }}</span></div>
+                formatCurrency (widthdrawObj.usd_money) }}</span></div>
         <div class="full-width92">
             <van-row class="money-box" gutter="10">
                 <van-col span="12">
                     <div class="money-num" :class="activeType == 1 ? 'van-active' : ''" @click="fnnChangeCard(1)">
-                        Chuyển đổi USD</div>
+                      Đổi sang USD</div>
                 </van-col>
                 <van-col span="12">
                     <div class="money-num" :class="activeType == 2 ? 'van-active' : ''" @click="fnnChangeCard(2)">
-                        Chuyển đổi VND</div>
+                      Đổi sang VND</div>
                 </van-col>
             </van-row>
 
             <van-form ref="refFormPassword" class="public-form">
                 <div>
                     <div class="inp-label">{{ $t('my_exchange.text5') }}</div>
-                    <van-field v-model.trim="formExchange.money" class="bg-inp" placeholder="Vui lòng nhập số tiền đổi"
+                    <van-field v-model.trim="formExchange.money" class="bg-inp" placeholder="Nhập số tiền"
                         type="number" :rules="[{ validator: checkMoney, message: errMsg }]" />
                 </div>
                 <div>
                     <div class="inp-label">{{ $t('my_exchange.text6') }}</div>
                     <van-field v-model.trim="formExchange.t_password" class="bg-inp"
-                        placeholder="Vui lòng nhập mật khẩu quỹ" clearable type="password"
+                        placeholder="Nhập mật khẩu" clearable type="password"
                         :rules="[{ required: true, message: 'Vui lòng nhập mật khẩu quỹ' }]" />
                 </div>
             </van-form>
             <van-button block type="info" native-type="submit" class="marTop40" @click="fnBtnSave" v-btn-re-click>{{ $t('my_exchange.text7') }}</van-button>
+          <div> Lưu ý thêm dấu chấm vào phần số tiền  ví dụ là 500.000.000.000 VNĐ</div>
         </div>
     </div>
 </template>
@@ -80,6 +81,12 @@ export default {
             this.activeType = val;
         },
 
+      formatCurrency(value) {
+        if (!value) return '0';
+        let stringValue = value.toString();
+        // 使用点号(.)作为千分位符号
+        return stringValue.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+      },
         /*提交*/
         fnBtnSave() {
             this.$refs.refFormPassword.validate().then(() => {
