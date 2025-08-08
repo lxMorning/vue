@@ -126,12 +126,12 @@ export default {
       switch (type) {
         case "hose":
           console.log(type)
-          return this.judgeColor(percentNum, 0.07)
+          return this.judgeColor(percentNum, 7)
         case "hnx":
           console.log(type)
-        return this .judgeColor(percentNum, 0.10)
+        return this .judgeColor(percentNum, 10)
         case "upcom":
-         return this.judgeColor(percentNum, 0.15)
+         return this.judgeColor(percentNum, 15)
       }
 
       return 'color-orange';
@@ -140,7 +140,7 @@ export default {
       console.log(percent, rant)
       if (percent > 0) {
         if (percent > rant) return 'color-purple';
-        return 'color-orange';
+        return 'color-green';
       } else if (percent < 0) {
         if (percent < -rant) return 'color-blue';
         return 'color-red';

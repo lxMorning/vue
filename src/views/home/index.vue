@@ -22,7 +22,7 @@
           <van-row class="index-btn-box" gutter="8">
             <van-col span="6" v-for="(item, index) in btnIndex4" :key="index">
               <div class="btn-list" :class="'index-btn'+(index+1)" @click="fnNavGo(index)">
-                <van-image :src="require('@/assets/images/index_'+(index+1)+'.png')"/>
+                <van-image :src="require('@/assets/images/icon_'+(index+1)+'.png')"/>
                 <span class="txt-menu">{{item.name}}</span>
               </div>
             </van-col>

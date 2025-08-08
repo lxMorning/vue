@@ -20,8 +20,8 @@
             <van-form ref="refFormPassword" class="public-form">
                 <div>
                     <div class="inp-label">{{ $t('my_exchange.text5') }}</div>
-                    <van-field v-model.trim="formExchange.money" class="bg-inp" placeholder="Nhập số tiền"
-                        type="number" :rules="[{ validator: checkMoney, message: errMsg }]" />
+                    <van-field v-model.trim="formExchange.formattedMoney" class="bg-inp" placeholder="Nhập số tiền"
+                        type="number" :rules="[{ validator: checkMoney, message: errMsg }]"  @input="handleMoneyInput" />
                 </div>
                 <div>
                     <div class="inp-label">{{ $t('my_exchange.text6') }}</div>
@@ -31,7 +31,6 @@
                 </div>
             </van-form>
             <van-button block type="info" native-type="submit" class="marTop40" @click="fnBtnSave" v-btn-re-click>{{ $t('my_exchange.text7') }}</van-button>
-          <div> Lưu ý thêm dấu chấm vào phần số tiền  ví dụ là 500.000.000.000 VNĐ</div>
         </div>
     </div>
 </template>
@@ -43,6 +42,7 @@ export default {
     name: "myWithdraw",
     data() {
         return {
+
             showCard: false,
             activeType: 1,
             tel:"",
@@ -52,6 +52,7 @@ export default {
                 usd_money: "",
             },
             formExchange: {
+              formattedMoney: "",
                 money: "",
                 type: 1,  /* 兑换类型id */
                 t_password: "",
@@ -60,6 +61,31 @@ export default {
         }
     },
     methods: {
+
+
+
+      formatNumberWithDots(num) {
+        if (!num) return '';
+        // 移除所有现有的分隔符
+        let cleanNum = num.toString().replace(/\./g, '');
+        // 添加千分位分隔符
+        return cleanNum.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      },
+
+      // 处理输入事件
+      handleMoneyInput(value) {
+        // 移除所有非数字字符，除了我们允许的点号
+        const cleanValue = value.replace(/[^0-9.]/g, '');
+
+        // 移除所有点号以获取纯数字
+        const numericValue = cleanValue.replace(/\./g, '');
+
+        // 更新原始数字值
+        this.formExchange.money = numericValue;
+
+        // 格式化显示值
+        this.formExchange.formattedMoney = this.formatNumberWithDots(numericValue);
+      },
         checkMoney(val) {
             console.log(val);
             if (val == 0) {
