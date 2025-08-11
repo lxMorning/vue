@@ -36,23 +36,23 @@ export default {
 	"ruleConfirm":"Vui lòng xác nhận mật khẩu của bạn"
   },
   "myCardManage_Bind": {
-          "title": "Ràng buộc thẻ tài chính",
-          "placeholderCardName": "Tên chủ tài khoản",
-          "labelCardName": "Tên chủ tài khoản",
+          "title": "Liên kết ngân hàng",
+          "placeholderCardName": "Nhập tên ngân hàng",
+          "labelCardName": "Tên chủ ngân hàng :",
           "errorCardName": "Vui lòng nhập tên chủ thẻ",
-          "placeholderCardId": "Số tài khoản ngân hàng",
-          "labelCardId": "Số tài khoản ngân hàng",
+          "placeholderCardId": "Nhập số tài khoản",
+          "labelCardId": "Số tài khoản ngân hàng:",
           "errorCardId": "Vui lòng nhập tài khoản thẻ ghi nợ",
-          "placeholderCardType": "Tên ngân hàng",
-          "labelCardType": "Tên ngân hàng",
+          "placeholderCardType": "Nhập tên ngân hàng",
+          "labelCardType": "Tên ngân hàng:",
           "errorCardType": "Vui lòng nhập tên thẻ ghi nợ",
-          "placeholderCardBranch": "Tên chi nhánh ngân hàng",
-          "labelCardBranch": "Tên chi nhánh ngân hàng",
+          "placeholderCardBranch": "Nhập chi nhánh ngâng hàng ",
+          "labelCardBranch": "Chi nhánh ngân hàng :",
           "errorCardBranch": "Vui lòng nhập tên chi nhánh",
           "placeholderBranchNumber": "Mã ngân hàng",
           "labelBranchNumber": "Mã ngân hàng",
           "errorBranchNumber": "Vui lòng nhập mã ngân hàng",
-          "text1": "Lưu lại",
+          "text1": "Xác nhận",
           "successMessage": "Ràng buộc thành công！"
       },
   "manageFinances": {
@@ -242,7 +242,7 @@ export default {
     },
   "my_cardManage": {
     "text1": "Không có dữ liệu",
-    "text2": "xóa bỏ",
+    "text2": "Xóa bỏ ",
     "text3": "Thêm tài khoản ngân hàng"
   },
   "my_cardManage_Bind": {
@@ -288,15 +288,15 @@ export default {
   },
   "my_transaction_password": {
     "text1": "Mật khẩu quỹ hiện tại",
-    "text2": "Cấp vốn cho mật khẩu mới",
-    "text3": "Xác nhận mật khẩu quỹ",
+    "text2": "Mật khẩu giao dịch mới",
+    "text3": "Xác nhận mật khẩu :",
     "text4": "Đặt lại mật khẩu"
   },
   "my_withdraw": {
-    "text1": "Tài khoản có sẵn để rút tiền：",
+    "text1": "Số dư khả dụng:",
     "text2": "Số tiền rút",
-    "text3": "Mật khẩu quỹ",
-    "text4": "Gửi hoàn thành"
+    "text3": "Mật khẩu giao dịch :",
+    "text4": "Gửi yêu cầu"
   },
   "tab1_income": {
     "text1": "Không có dữ liệu"

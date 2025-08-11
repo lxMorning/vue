@@ -1,6 +1,6 @@
 <template>
     <div>
-        <navBar navTitle="Mật khẩu quỹ" />
+        <navBar navTitle="Mật khẩu giao dịch" />
 
         <div class="full-width92">
             <van-form ref="refFormPassword" class="public-form">
@@ -11,14 +11,14 @@
                 </div>
                 <div>
                     <div class="inp-label">{{ $t('my_transaction_password.text2') }}</div>
-                    <van-field v-model.trim="formPassword.t_password" class="bg-inp" placeholder="Vui lòng nhập mật khẩu mới để có tiền"
-                               clearable type="password"  :rules="[{ required: true, message: 'Vui lòng nhập mật khẩu mới để có tiền' }]"/>
+                    <van-field v-model.trim="formPassword.t_password" class="bg-inp" placeholder="Nhập mật khẩu"
+                               clearable type="password"  :rules="[{ required: true, message: 'Nhập mật khẩu' }]"/>
                 </div>
 
                 <div>
                     <div class="inp-label">{{ $t('my_transaction_password.text3') }}</div>
-                    <van-field v-model.trim="formPassword.check_password" class="bg-inp" placeholder="Vui lòng xác nhận mật khẩu quỹ"
-                               clearable type="password"  :rules="[{ required: true, message: 'Vui lòng xác nhận mật khẩu quỹ' },
+                    <van-field v-model.trim="formPassword.check_password" class="bg-inp" placeholder="Nhập mật khẩu"
+                               clearable type="password"  :rules="[{ required: true, message: 'Nhập mật khẩu' },
                                 {validator: checkPass, message: 'Mật khẩu được nhập hai lần không khớp' }]" />
                 </div>
             </van-form>

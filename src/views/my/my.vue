@@ -123,17 +123,24 @@ export default {
       }
 
       if (item.url === "my_withdraw") {
-        if (this.userInfoObj.username) {
-          this.$router.push({
-            name: item.url,
-            query: {
-              username: this.userInfoObj.username,
-              money: this.userInfoObj.money,
-            }
-          });
-        } else {
-          this.$router.push({ name: "my_authentication" });
-        }
+        this.$router.push({
+          name: item.url,
+          query: {
+            username: this.userInfoObj.username,
+            money: this.userInfoObj.money,
+          }
+        });
+        // if (this.userInfoObj.username) {
+        //   this.$router.push({
+        //     name: item.url,
+        //     query: {
+        //       username: this.userInfoObj.username,
+        //       money: this.userInfoObj.money,
+        //     }
+        //   });
+        // } else {
+        //   this.$router.push({ name: "my_authentication" });
+        // }
         return;
       }
 

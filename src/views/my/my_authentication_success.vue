@@ -7,9 +7,9 @@
             </div>
 
             <van-cell-group class="vanCell-padding0">
-                <van-cell title="Tên chứng minh thư" :value="userInfoObj.username" />
-                <van-cell title="số ID" :value="userInfoObj.name_id" />
-                <van-cell title="Tình trạng xác minh" :value="userInfoObj.status" />
+                <van-cell title="Họ và tên" :value="userInfoObj.username" />
+                <van-cell title="Số CMND/CCCD" :value="userInfoObj.name_id" />
+                <van-cell title="Trạng thái xác minh" :value="userInfoObj.status" />
             </van-cell-group>
         </main>
     </div>

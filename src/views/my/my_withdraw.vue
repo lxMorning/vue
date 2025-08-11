@@ -1,10 +1,10 @@
 <template>
     <div>
-        <navBar navTitle="rút tiền" />
+        <navBar navTitle="Rút tiền" />
         <div class="bgBlock-lightBlue">{{ $t('my_withdraw.text1') }}<span class="color-theme">{{ widthdrawObj.total_money }}</span></div>
         <div class="full-width92">
             <van-cell-group class="vanCell-padding0">
-                <van-cell title="chủ thẻ" :value="widthdrawObj.username" />
+                <van-cell title="Chủ tài khoản :" :value="widthdrawObj.username" />
                 <van-cell title="Tài khoản ngân hàng" @click="fnBtnCard" isLink>
                     <template #default>
                         <ul class="tr">
@@ -37,8 +37,8 @@
                 </div>
                 <div>
                     <div class="inp-label">{{ $t('my_withdraw.text3') }}</div>
-                    <van-field v-model.trim="formWidthdraw.t_password" class="bg-inp" placeholder="Vui lòng nhập mật khẩu quỹ"
-                               clearable type="password"  :rules="[{ required: true, message: 'Vui lòng nhập mật khẩu quỹ' }]"/>
+                    <van-field v-model.trim="formWidthdraw.t_password" class="bg-inp" placeholder="Nhập mật khẩu"
+                               clearable type="password"  :rules="[{ required: true, message: 'Nhập mật khẩu' }]"/>
                 </div>
             </van-form>
             <van-button block type="info" native-type="submit" class="marTop40" @click="fnBtnSave"
